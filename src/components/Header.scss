@@ -1,0 +1,72 @@
+@import "../common/colors";
+
+.header {
+    width: 100%;
+    background-color: $purple1;
+    color: $grey6;
+    font-weight: 600;
+
+    .error {
+        position: absolute;
+        background-color: #faa;
+        z-index: 9;
+        color: black;
+        top: 9%;
+        margin-left: .3rem;
+        padding: .1rem .3rem;
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: $width-mobile-max)
+        and (orientation: landscape) {
+            top: 16%;
+        }
+        @media (min-device-width: $width-desktop-min) and (min-height: $height-desktop-min) {
+            top: 8%;
+        }
+    }
+
+    .header-row {
+        display: flex;
+        justify-content: space-between;
+        height: 3rem;
+        padding: 0 .9rem;
+        margin-top: .3rem;
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            margin-top: -7px;
+
+            .user-name {
+                margin: 0 auto;
+                padding-left: 7px;
+            }
+        }
+
+        button {
+            background-color: unset;
+            border: none;
+            outline: none;
+
+            margin: 0 .3rem;
+            i {
+                font-size: 28px;
+                color: $grey3;
+            }
+        }
+        .btn-menu {
+            margin-left: -.3rem;
+            align-self: start;
+            i {
+                font-size: 43px;
+                color: $grey10;
+            }
+        }
+        .tabs {
+            margin-top: .4rem;
+        }
+        .logo {
+            align-self: center;
+            margin-top: -2px;
+        }
+    }
+}
